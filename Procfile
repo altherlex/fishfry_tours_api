@@ -1,1 +1,1 @@
-worker: gunicorn config.wsgi:application --bind :8000
+worker: gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
