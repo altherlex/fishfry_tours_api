@@ -1,1 +1,1 @@
-web: gunicorn config.wsgi:application --bind :$PORT
+web: gunicorn --chdir config wsgi:application --bind :$PORT
