@@ -1,1 +1,1 @@
-web: python config/settings/production.py
+web: gunicorn config.wsgi:application --bind :8000
