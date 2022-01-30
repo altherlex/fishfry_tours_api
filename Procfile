@@ -1,1 +1,1 @@
-web: python app.py
+web: python config/settings/production.py
