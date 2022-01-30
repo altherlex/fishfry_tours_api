@@ -1,1 +1,1 @@
-web: gunicorn config.wsgi:application --bind :8000
+worker: gunicorn config.wsgi:application --bind :8000
