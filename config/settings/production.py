@@ -4,10 +4,15 @@ from ..env_utils import get_env
 
 DEBUG = False
 SECRET_KEY = get_env("DJANGO_SECRET_KEY")
-STATIC_URL = get_env("DJANGO_STATIC_URL")
-STATIC_ROOT = get_env("DJANGO_STATIC_ROOT")
 ALLOWED_HOSTS = get_env("DJANGO_ALLOWED_HOSTS").split(",")
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+MIDDLEWARE = ["whitenoise.django.GzipManifestStaticFilesStorage"] + MIDDLEWARE
+
 
 # Nginx is used instead of SecurityMiddleware
 # for setting all the recommended security headers
@@ -27,6 +32,7 @@ DATABASES = {
         "ATOMIC_REQUESTS": True,
     }
 }
+
 
 # TODO: Add proper handlers
 LOGGING = {
