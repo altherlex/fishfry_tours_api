@@ -45,4 +45,7 @@ heroku run python manage.py migrate --settings=config.settings.production
 heroku run python manage.py collectstatic --no-input 
 heroku run python manage.py loaddata avatars
 heroku run python manage.py loaddata initial_db.json
+
+#tests
+python -m pytest
 ```
