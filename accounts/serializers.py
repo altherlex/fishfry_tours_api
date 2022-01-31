@@ -30,6 +30,7 @@ class AvatarSerializer(serializers.ModelSerializer):
             request = self.context.get('request')
             return request.build_absolute_uri(obj.photo.url)
 
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
