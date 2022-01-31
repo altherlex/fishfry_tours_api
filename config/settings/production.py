@@ -6,6 +6,7 @@ DEBUG = False
 SECRET_KEY = get_env("DJANGO_SECRET_KEY")
 ALLOWED_HOSTS = get_env("DJANGO_ALLOWED_HOSTS").split(",")
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
