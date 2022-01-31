@@ -23,12 +23,12 @@ jobs:
     docker:
       - image: cimg/python:3.9.1
         environment:
-          DATABASE_URL: postgresql://root@localhost/circle_test?sslmode=disable
+          DATABASE_URL: postgresql://product@localhost/product?sslmode=disable
 
       - image: cimg/postgres:14.0
         environment: # environment variables for the Postgres container.
-          POSTGRES_USER: root
-          POSTGRES_DB: circle_test
+          POSTGRES_USER: product
+          POSTGRES_DB: product
 
     # Checkout the code as the first step. This is a dedicated CircleCI step.
     # The python orb's install-packages step will install the dependencies from a Pipfile via Pipenv by default.
