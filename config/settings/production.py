@@ -8,14 +8,13 @@ ALLOWED_HOSTS = get_env("DJANGO_ALLOWED_HOSTS").split(",")
 
 STATIC_URL = get_env("DJANGO_STATIC_URL")
 STATIC_ROOT = get_env("DJANGO_STATIC_ROOT")
-MIDDLEWARE = ["whitenoise.middleware.WhiteNoiseMiddleware"] + MIDDLEWARE
+# MIDDLEWARE = ["whitenoise.middleware.WhiteNoiseMiddleware"] + MIDDLEWARE
 
 # Nginx is used instead of SecurityMiddleware
 # for setting all the recommended security headers
 SILENCED_SYSTEM_CHECKS = [
     "security.W001",
 ]
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 DATABASES = {
