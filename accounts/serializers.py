@@ -4,6 +4,7 @@ from dj_rest_auth.models import TokenModel
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
+from decouple import config
 
 from .models import Avatar
 
@@ -12,6 +13,7 @@ User = get_user_model()
 
 class AvatarSerializer(serializers.ModelSerializer):
     name = serializers.SerializerMethodField()
+    photo = serializers.SerializerMethodField()
 
     class Meta:
         model = Avatar
@@ -20,6 +22,13 @@ class AvatarSerializer(serializers.ModelSerializer):
     def get_name(self, obj):
         return Path(obj.photo.name).stem
 
+    def get_photo(self, obj):
+        avatar_url = config("AVATAR_URL", default=None)
+        if avatar_url:
+            return "{0}{1}".format(avatar_url, obj.photo)
+        else:
+            request = self.context.get('request')
+            return request.build_absolute_uri(obj.photo.url)
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

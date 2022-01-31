@@ -43,6 +43,7 @@ class BoardViewSet(
     serializer_class = BoardSerializer
     permission_classes = [IsAuthenticated, IsOwnerForDangerousMethods]
 
+    # DOC: Override - Add curren user to board
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 

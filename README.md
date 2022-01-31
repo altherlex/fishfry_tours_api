@@ -10,6 +10,9 @@ Demo: https://fishfrytoursapi.herokuapp.com/api/
 - Django REST framework for a powerful API
 - Django ORM for interacting with the database
 - Bootstrapped with KnBoard
+- Rest_framework
+- Allauth
+- Dj_rest_auth
 - PostgreSQL
 - Unit tests with Pytest
 
