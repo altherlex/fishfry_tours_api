@@ -1,9 +1,14 @@
-API for [fishfry_tours_app](https://github.com/altherlex/fishfry_tours_app)
+RESTful API for [fishfry_tours_app](https://github.com/altherlex/fishfry_tours_app)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://fishfrytoursapi.herokuapp.com/api/)
+
+Demo: https://fishfrytoursapi.herokuapp.com/api/
 
 ### Open Source Tools Used
 
 - Django REST framework for a powerful API
 - Django ORM for interacting with the database
+- Bootstrapped with KnBoard
 - PostgreSQL
 - Unit tests with Pytest
 
@@ -22,7 +27,7 @@ python3 --version
 virtualenv -p python3 venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-pip3 install -r requirements/base.txt
+pip3 install -r requirements.txt
 
 psql
 CREATE DATABASE fryfish;
