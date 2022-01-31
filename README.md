@@ -1,9 +1,15 @@
-RESTful API for [fishfry_tours_app](https://github.com/altherlex/fishfry_tours_app)
+RESTful API for Fishfry_tours_app ([demo](https://github.com/altherlex/fishfry_tours_app) [code](https://github.com/altherlex/fishfry_tours_app))
 
 [![CircleCI](https://circleci.com/gh/altherlex/fishfry_tours_api/tree/master.svg?style=svg)](https://circleci.com/gh/altherlex/fishfry_tours_api/tree/master)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://fishfrytoursapi.herokuapp.com/api/)
 
-Demo: https://fishfrytoursapi.herokuapp.com/api/
+
+Demo: [fishfrytoursapi.herokuapp.com/api/](https://fishfrytoursapi.herokuapp.com/api/)
+
+Admin: [fishfrytoursapi Admin](https://fishfryapp.herokuapp.com/backdoor/)
+
+
+---
 
 ### Open Source Tools Used
 
